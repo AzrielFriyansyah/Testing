@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>biodata</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Kelompok 6</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="Index">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </div>
+          <div class="Pengalaman">
+            <li class="nav-item">
+              <a class="nav-link" href="pengalaman.html">Pengalaman</a>
+            </li>
+          </div>
+          <div class="Kontak">
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </div>
+          <div class="Hobi">
+            <li class="nav-item">
+              <a class="nav-link" href="hobi.html">Hobi</a>
+            </li>
+          </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </section>
+
+  <div class="customBio" id="customBio">
+    <h1 class="text-center">Custom Biodata</h1>
+    <form id="mahasiswaForm" style="display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 2em;
+  padding-block: 2em;
+    padding: 40px;
+    margin: 60px;">
+
+
+      <br>
+      <label for="nama" style="margin-block: 0.5em;">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" style="width: 500px;height: 35px; padding: 15px">
+      <br>
+      <label for="nim" style="margin-block: 0.5em;">NIM:</label>
+      <input type="text" id="nim" name="nim" style="width: 500px;height: 35px;padding: 15px">
+      <br>
+      <label for="ttl" style="margin-block: 0.5em;">Tanggal Lahir:</label>
+      <input type="text" id="ttl" name="ttl" style="width: 500px;height: 35px;padding: 15px">
+      <br>
+      <label for="alamat" style="margin-block: 0.5em;">Alamat:</label>
+      <input type="text" id="alamat" name="alamat" style="width: 500px;height: 35px;padding: 15px">
+      <br>
+      <label for="pendidikan" style="margin-block: 0.5em;">Pendidikan:</label>
+      <input type="text" id="pendidikan" name="pendidikan" style="width: 500px;height: 35px;padding: 15px">
+      <br>
+      <label for="foto">Foto Profil:</label>
+      <input type="file" id="foto" name="foto" accept="image/*" style="text-align-last: center;">
+      <br>
+
+      <ul style="list-style-type: none;">
+        <li>
+          <button type="button" onclick="tambahMahasiswa()"
+            style="margin-block: 1.5em;width: 300px;height: 35px;">Tambahkan
+            Mahasiswa</button>
+
+          <button type="button" onclick="editMahasiswa()" style="margin-block: 1.5em;width: 300px;height: 35px;">Edit
+            Mahasiswa</button>
+        </li>
+      </ul>
+
+
+      <label for="NimHps" style="margin-block: 0.5em;">NIM:</label>
+      <input type="text" id="NimHps" name="NimHps" style="width: 500px;height: 35px;">
+      <br>
+
+      <button type="button" onclick="hapusMahasiswa()" style="margin-block: 1.5em;width: 500px;height: 35px;">Hapus
+        Mahasiswa</button>
+      <p style="padding-top: 1em; color: rgb(0, 0, 0);">
+        Pastikan NIM Benar, karena NIM menjadi patokan untuk mengedit data.
+      </p>
+    </form>
+
+    <script src="custom.js"></script>
+  </div>
+
+  <div id="biodata" class="wrapper">
+
+    <h1 class="text-center">BIODATA</h1>
+    <div class="our_team">
+
+      <div id="biodataContainer"></div>
+
+      <!-- <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/foto azmii.jpg" alt="" style="background: #dbd5f9;
+            max-width: 190px;
+            width: 100%;
+            height: 190px;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 5px;
+            position: relative;
+            ">
+        </div>
+        <h3>Febri Azimi Alfirmansyah</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602020</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Malang, 04 Februari 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Jl.Panglima Sudirman Blk GT No.41 Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. SDN 1 SIDOMORO 2010-2016
+        <br>2. SMPN 4 GRESIK 2016-2019</br>
+        3. SMK SEMEN Gresik 2019-2022
+
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/profil wahab.jpg" alt="" style="background: #dbd5f9;
+          max-width: 190px;
+          width: 100%;
+          height: 190px;
+          margin: 0 auto;
+          border-radius: 50%;
+          padding: 5px;
+          position: relative;
+          ">
+
+        </div>
+        <h3>Muhammad Nur Wahab</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602033</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Gresik, 07 April 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Jl.Panglima Sudirman Gang 6 No 29 Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. SDN 1 SIDOKUMPUL 2010-2016
+        <br>2. SMPN 1 GRESIK 2016-2019</br>
+        3. SMAN 1 GRESIK 2019-2022
+
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/foto daffa.jpg" alt="">
+        </div>
+        <h3>M.Daffa Naufaldi Waluyo</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602030</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Krian, 8 Juni 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Alam singgasana blok H12 Cerme Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. SD Muhammadiyah 14 Surabaya 2010-2016
+        <br>2. SMPN 2 Cerme 2016-2019</br>
+        3. SMKN 1 Cerme 2019-2022
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/pp panjuls.png" alt="">
+        </div>
+        <h3>Muhammad Fachrur Rozi</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602005</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Gresik, 21 Januari 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Jl raya Desa Tambak Beras RT 13 RW 01 Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. MI Matholiul Anwar 2010-2016
+        <br>2. SMPN 1 Kebomas 2016-2019</br>
+        3. SMK PGRI 1 GRESIK 2019-2022
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/foto nata.jpg" alt="">
+        </div>
+        <h3>Muhammad Javier Asmadinata</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602010</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Surabaya, 23 Januari 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Oma Indah Menganti blok H2 no 07 Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. SDN Bringkang 2010-2016
+        <br>2. SMPN 1 KEDAMEAN 2016-2019</br>
+        3. SMK SUNAN GIRI MENGANTI 2019-2022
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/foto eka.jpg" alt="">
+        </div>
+        <h3>Eka Adi Rahmatullah</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602034</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Bojonegoro, 30 Mei 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Jln. Ir.Ibrahim Zahier ll Gang 3A Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. MI Madrasah Ibtidaiyah 2010-2016
+        <br>2. SMP Negeri 1 Kebomas 2016-2019</br>
+        3. SMA Semen Gresik 2019-2022
+
+      </div>
+      <div class="team_member">
+        <div class="member_img">
+          <img class="rounded-circle sam" src="assets/image/foto riyan.jpg" alt="">
+        </div>
+        <h3>Ahmad Febriansyah</h3>
+        <h2>Teknik Informatika A-PG</h2>
+        <span>220602035</span>
+        <p>
+          <h4>TANGGAL LAHIR :</h4>
+        </p>
+        Pongo,16 Februari 2004
+        <p>
+          <h4>ALAMAT :</h4>
+        </p>
+        Jl. Raya Brantas no 51 blok A GKB Gresik
+        <p>
+          <h4>PENDIDIKAN :</h4>
+        </p>
+        1. SDN 1 Pongo 2010-2016
+        <br>2. SMPN 1 Wangi-wangi 2016-2019</br>
+        3. SMAN 1 Wangi-wangi 2019-2022
+      </div> -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#fffeff" fill-opacity="1"
+          d="M0,160L48,186.7C96,213,192,267,288,256C384,245,480,171,576,149.3C672,128,768,160,864,192C960,224,1056,256,1152,272C1248,288,1344,288,1392,288L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

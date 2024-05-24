@@ -1,0 +1,55 @@
+/* General styles */
+body {
+    background: linear-gradient(#e7cccc 0%, rgb(240, 155, 156) 40%, #ab75e7 100%);
+    padding-top: 55px;
+    margin-top: 70px; /* Adjust for fixed navbar */
+    
+}
+
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: light;
+}
+
+.nav-link {
+    color: #000000;
+}
+
+
+
+/* Section styles */
+section#pengalaman {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+
+/* Card styles */
+.card {
+    border: 1px solid #007bff;
+    background-color: #fdb9b9;
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #006eff;
+
+}
+.card-text {
+    font-size: 1em;
+    color: #141313;
+}
+.card:hover {
+    transform: translateY(-10px);
+    background-color: rgb(232, 182, 183);
+}
+
+.Home:hover,.Biodata:hover,.Pengalaman:hover,.Kontak:hover,.Hobi:hover,.Index:hover{
+    background-color: rgb(232, 182, 183);
+}
